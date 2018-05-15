@@ -13,8 +13,10 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+// basewebpackConfig和當前配置進行合併
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
+    // 傳入參數
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
   // cheap-module-eval-source-map is faster for development
@@ -32,6 +34,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     contentBase: false, // since we use CopyWebpackPlugin.
     compress: true,
     host: HOST || config.dev.host,
+    // 端口位置
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay
@@ -53,8 +56,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
+      // 編譯生成的html文件名
       filename: 'index.html',
       template: 'index.html',
+      // 表示打包輸出過程中，會自動將.css和.js添加到上述文件中
+      // css 默認路徑是在head標籤中
+      // js 默認路徑是在body內
       inject: true
     }),
     // copy custom static assets
