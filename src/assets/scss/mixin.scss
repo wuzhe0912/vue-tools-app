@@ -1,0 +1,46 @@
+// 移動端管理所有px距離的共用函數
+@function to-rem($px) {
+  @return ($px / 16px) * 1rem;
+}
+
+@mixin position ($type, $top: n, $right: n, $bottom: n, $left: n) {
+  position: $type;
+
+  @if $top != n {
+    top: $top;
+  }
+
+  @if $right != n {
+    right: $right;
+  }
+
+  @if $bottom != n {
+    bottom: $bottom;
+  }
+
+  @if $left != n {
+    left: $left;
+  }
+}
+
+@mixin breakpoint($point, $min: true) {
+  @if $point == ie10 {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      @content;
+    }
+  }
+
+  @else {
+    @if $min == true {
+      @media only screen and (min-width: $point) {
+        @content;
+      }
+    }
+
+    @else {
+      @media only screen and (max-width: $point - 1) {
+        @content;
+      }
+    }
+  }
+}
