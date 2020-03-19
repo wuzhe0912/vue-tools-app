@@ -1,13 +1,14 @@
 <template lang="pug">
-  .login__wrap login
+  .wrap header
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
-  name: 'login',
-  components: {}
+  name: 'body-header',
+  components: {},
+  data () {
+    return {}
+  }
 }
 </script>
 
