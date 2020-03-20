@@ -15,3 +15,10 @@ $font-big: $font-normal * 1.25;          // 20px
 $font-large: $font-normal * 1.5;         // 24px
 $font-huge: $font-normal * 2.75;         // 44px
 $font-mega: $font-normal * 4.5;          // 72px
+
+// z-index
+$z-index: zero, base, fixed, modal;
+
+// height
+$header: to-rem(40px);
+$nav: to-rem(70px);

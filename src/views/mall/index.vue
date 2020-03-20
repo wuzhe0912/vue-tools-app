@@ -1,11 +1,10 @@
 <template lang="pug">
-  .header__wrap
-    .container
+  .mall__wrap mall
 </template>
 
 <script>
 export default {
-  name: 'body-header',
+  name: 'mall',
   components: {},
   data () {
     return {}

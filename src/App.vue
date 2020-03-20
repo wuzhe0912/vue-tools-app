@@ -1,7 +1,7 @@
 <template lang="pug">
-  #app
+  section.layout
     bodyHeader(v-if="$route.meta.hasHeader")
-    .layout
+    .layout__container(:class="{noNav: !$route.meta.hasNav, noHeader: !$route.meta.hasHeader}")
       router-view
     bodyNav(v-if="$route.meta.hasNav")
 </template>
@@ -21,6 +21,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '@/assets/scss/share.scss';
 
+.layout {
+  overflow-x: hidden;
+  margin: auto;
+  width: 100%;
+  min-width: to-rem(320px);
+  max-width: $padPro;
+  background-color: $main-bg;
+}
 </style>

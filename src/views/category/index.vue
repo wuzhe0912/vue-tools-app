@@ -1,11 +1,10 @@
 <template lang="pug">
-  .header__wrap
-    .container
+  .category__wrap category
 </template>
 
 <script>
 export default {
-  name: 'body-header',
+  name: 'category',
   components: {},
   data () {
     return {}

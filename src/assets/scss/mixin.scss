@@ -44,3 +44,15 @@
     }
   }
 }
+
+
+// nav
+$navList: todo category news mall personal;
+
+@mixin nav-icon {
+  @each $icon in $navList {
+    .icon-#{$icon}::before {
+      background-image: url("./images/#{$icon}.svg");
+    }
+  }
+}

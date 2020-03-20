@@ -1,6 +1,52 @@
 @import '@/assets/scss/share.scss';
 
 .nav__wrap {
-  min-height: to-rem(70px);
-  background: $primary;
+  @include position(fixed, n, 0, 0, 0);
+
+  width: 100%;
+  min-width: to-rem(320px);
+  max-width: $padPro;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  height: $nav;
+  background-color: $primary;
+}
+
+.nav__link {
+  @include nav-icon;
+
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  color: $light;
+
+  &.active {
+    color: $nav-active-color;
+  }
+}
+
+.icon {
+  margin-bottom: to-rem(5px);
+
+  &::before {
+    content: '';
+    display: block;
+    width: to-rem(30px);
+    height: to-rem(30px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.txt {
+  font-size: $font-small;
 }
