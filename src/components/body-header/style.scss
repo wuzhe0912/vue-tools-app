@@ -3,6 +3,9 @@
 .header__wrap {
   @include position(fixed, 0, 0, n, 0);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-width: to-rem(320px);
   max-width: $padPro;
@@ -12,10 +15,7 @@
   box-shadow: 0px to-rem(3px) to-rem(6px) $header-shadow;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+.header__title {
+  font-size: $font-big;
+  color: $header-txt;
 }
