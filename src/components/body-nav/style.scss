@@ -17,8 +17,6 @@
 }
 
 .nav__link {
-  @include nav-icon;
-
   display: flex;
   align-items: center;
   flex: 1;
@@ -35,16 +33,7 @@
 
 .icon {
   margin-bottom: to-rem(5px);
-
-  &::before {
-    content: '';
-    display: block;
-    width: to-rem(30px);
-    height: to-rem(30px);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  font-size: to-rem(28px);
 }
 
 .txt {

@@ -3,7 +3,7 @@
     nav.nav
       template(v-for="node in list")
         router-link.nav__link(:to="{ name: `${node.route}` }")
-          i.icon(:class="`icon-${node.icon}`")
+          font-awesome-icon.icon(:icon="node.icon")
           h2.txt {{ node.name }}
 </template>
 
@@ -14,11 +14,11 @@ export default {
   data () {
     return {
       list: [
-        { name: '待辦', icon: 'todo', route: 'todo' },
-        { name: '分類', icon: 'category', route: 'category' },
-        { name: '新聞', icon: 'news', route: 'news' },
-        { name: '商城', icon: 'mall', route: 'mall' },
-        { name: '個人', icon: 'personal', route: 'personal' }
+        { name: '待辦', icon: 'list-alt', route: 'todo' },
+        { name: '分類', icon: 'bars', route: 'category' },
+        { name: '新聞', icon: 'newspaper', route: 'news' },
+        { name: '商城', icon: 'store-alt', route: 'mall' },
+        { name: '個人', icon: 'user', route: 'personal' }
       ]
     }
   }

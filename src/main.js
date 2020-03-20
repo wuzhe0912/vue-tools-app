@@ -5,6 +5,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import env from './env'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // styles
 import '@/assets/scss/style.scss'
@@ -18,8 +21,12 @@ axios.interceptors.response.use((response) => {
   return res
 })
 
+// 引入 library
+library.add(fas)
+
 // register component
 Vue.use(VueAxios, axios)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
