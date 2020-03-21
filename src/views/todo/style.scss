@@ -1,6 +1,159 @@
 @import '@/assets/scss/share.scss';
 
-// .form__input {
-//   width: 300px;
-//   background-color: $primary;
-// }
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.todo__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: to-rem(16px);
+  background-color: $light;
+}
+
+.time__title {
+  font-weight: bold;
+}
+
+.time__title,
+.table__card {
+  margin-bottom: to-rem(16px);
+}
+
+.table__card {
+  padding: to-rem(8px) 0;
+  border-bottom: 1px solid $border-line;
+  box-shadow: 0 to-rem(2px) to-rem(4px) $header-shadow;
+}
+
+.card__txt {
+  margin-right: to-rem(10px);
+  padding: to-rem(6px);
+  cursor: pointer;
+}
+
+.isActive {
+  color: $primary-light;
+  border-bottom: 2px solid $primary-light;
+}
+
+.todo__list {
+  max-height: to-rem(300px);
+  overflow: auto;
+}
+
+.list__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: to-rem(12px);
+  border: 1px solid $border-line;
+  padding: to-rem(8px);
+  border-radius: to-rem(20px);
+  box-shadow: 0px to-rem(3px) to-rem(6px) $header-shadow;
+}
+
+.list__checkbox {
+  cursor: pointer;
+}
+
+.list__txt,
+.edit__txt {
+  margin-left: to-rem(8px);
+  cursor: pointer;
+}
+
+.isCompleted {
+  text-decoration: line-through;
+}
+
+.edit__txt {
+  border-bottom: 1px solid $primary-light;
+}
+
+.icon__wrap {
+  display: flex;
+}
+
+.edit__icon {
+  margin-right: to-rem(8px);
+}
+
+.edit__icon,
+.delete__icon {
+  color: $primary-light;
+  cursor: pointer;
+}
+
+.todo__title {
+  color: $disabled;
+}
+
+.list__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: to-rem(16px);
+}
+
+.list__number {
+  color: $primary-light;
+  margin: 0 to-rem(2px);
+}
+
+.list__footer__clear {
+  color: $primary-light;
+  padding-bottom: to-rem(2px);
+  border-bottom: 1px solid $primary-light;
+}
+
+// 送出訊息
+.btn__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: to-rem(16px);
+}
+
+.btn__add {
+  width: 20%;
+  background: $primary-light;
+  border-radius: to-rem(20px);
+  cursor: pointer;
+}
+
+.btn__add__icon,
+.btn__add__txt {
+  color: $light;
+  font-size: $font-mini;
+}
+
+.btn__add__txt {
+  margin-left: to-rem(4px);
+}
+
+.add__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: to-rem(12px);
+  cursor: pointer;
+}
+
+.add__icon,
+.add__txt {
+  color: $light;
+  font-size: $font-big;
+}
+
+.add__txt {
+  margin-left: to-rem(4px);
+}

@@ -55,7 +55,7 @@
     left: to-rem(6px);
     width: to-rem(50px);
     height: to-rem(6px);
-    background: $shadow;
+    background: $loading-shadow;
     border-radius: 100%;
     animation: shadow .5s infinite;
   }
@@ -63,7 +63,7 @@
   @keyframes shadow {
     0%,100% {
       left: to-rem(8px);
-      background: $shadow;
+      background: $loading-shadow;
     }
     50% {
       left: 0;

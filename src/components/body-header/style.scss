@@ -11,11 +11,11 @@
   max-width: $padPro;
   height: $header;
   margin: auto;
-  background-color: $header-bg;
+  background: $header-bg;
   box-shadow: 0px to-rem(3px) to-rem(6px) $header-shadow;
 }
 
 .header__title {
   font-size: $font-big;
-  color: $header-txt;
+  color: $light;
 }
