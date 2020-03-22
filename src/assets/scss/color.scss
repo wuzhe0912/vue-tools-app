@@ -1,21 +1,21 @@
 // -- color --
 $main-bg: #f3f3f3;
-$primary: #f96337;
-$primary-light: #ffac34;
+$primary-weight: #1b262c;
+$primary: #0f4c75;
+$primary-light: #3282b8;
+$primary-mini: #bbe1fa;
 $light: #fff;
 $disabled: #c0c4cc;
 $disabled-icon: #ebeef5;
 $loading-shadow:#eaeaea;
 $white-shadow: #eee;
+$box-shadow: #00000029;
 
 // Header
-$header-bg: linear-gradient(to left, #ffac34 0%, #ff6639 100%);
-$header-shadow: #00000029;
+$header-bg: linear-gradient(to left, #3282b8 0%, #0f4c75 100%);
 // Nav
-$nav-bg: #fbfbfb;
-$nav-color: #2e0a00;
 $nav-active-color: #726464;
 // border
 $border-line: #dcdfe6;
 //icon
-$icon-bg: linear-gradient(to top, #ffac34 0%, #ff6639 100%);
+$icon-bg: linear-gradient(to top, #3282b8 0%, #0f4c75 100%);

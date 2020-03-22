@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-around;
   height: $nav;
-  background-color: $nav-bg;
+  background: $light;
   border-top: 1px solid $border-line;
 }
 
@@ -25,11 +25,11 @@
   justify-content: center;
   height: 100%;
   cursor: pointer;
-  color: $nav-color;
+  color: $primary-light;
 }
 
 .router-link-active {
-  color: $primary;
+  color: $primary-weight;
 }
 
 .icon {
@@ -42,6 +42,6 @@
   font-weight: 400;
 
   &.active {
-    color: $primary;
+    color: $primary-weight;
   }
 }

@@ -131,7 +131,7 @@ export default {
     },
     removeTodo (val) {
       if (val === 'clearAll') {
-        this.todoList = ''
+        this.todoList = []
       } else {
         let newIndex = ''
         this.todoList.forEach((node, key) => {
