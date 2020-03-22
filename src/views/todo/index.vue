@@ -40,9 +40,9 @@
           onblur="this.placeholder = '請輸入文字'"
           @keyup.enter="addTodoList()"
         )
-        button.btn__add
+        button.btn__add(@click="addTodoList()")
           font-awesome-icon.btn__add__icon(icon="hand-point-up")
-          span.btn__add__txt(@click="addTodoList()") 推送
+          span.btn__add__txt 推送
       button.btn__primary.add__container(@click="change()")
         font-awesome-icon.add__icon(icon="plus")
         span.add__txt 新增待辦事項
