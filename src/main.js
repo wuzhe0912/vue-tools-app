@@ -10,6 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // styles
 import '@/assets/scss/style.scss'
+import 'element-theme-chalk/lib/loading.css'
+
+import ElLoading from 'element-loading'
 
 // 超時檢查
 axios.defaults.timeout = 5000
@@ -25,6 +28,7 @@ library.add(fas)
 // register component
 Vue.use(VueAxios, axios)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.use(ElLoading)
 
 Vue.config.productionTip = false
 

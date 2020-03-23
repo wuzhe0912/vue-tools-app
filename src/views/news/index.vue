@@ -12,7 +12,7 @@
           img(:src="node.urlToImage")
           span.slide__txt {{ stringFormatter(node.title) }}
         .swiper-pagination.swiper-pagination-white(slot="pagination")
-    .news__list
+    .news__list(v-loading="loading")
       .news__list__wrap
         article.news__card(v-for="node in formData")
           .card__img
@@ -59,13 +59,12 @@ export default {
           el: '.swiper-pagination',
           clickable: true
         },
-        // simulateTouch: false,
-        // allowTouchMove: false,
         autoplay: {
           delay: 3000
         }
       },
-      slideList: []
+      slideList: [],
+      loading: false
     }
   },
 
@@ -75,6 +74,7 @@ export default {
 
   methods: {
     fetchTopNews (val) {
+      this.loading = true
       let api = `${process.env.VUE_APP_NEWS_API_URL}/top-headlines?country=${this.country}&apikey=${process.env.VUE_APP_NEWS_API_KEY}`
       if (val !== 'all' && val !== undefined) {
         this.isSelected = val
@@ -87,7 +87,9 @@ export default {
           if (node.urlToImage) item.push(node)
         })
         this.slideList = item.slice(0, 6)
+        this.loading = false
       }).catch((err) => {
+        this.loading = false
         console.log(err)
       })
     },

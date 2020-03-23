@@ -1,5 +1,5 @@
 <template lang="pug">
-  .personal__wrap mall
+  .personal__wrap personal
 </template>
 
 <script>
