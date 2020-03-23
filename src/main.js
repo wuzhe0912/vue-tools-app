@@ -4,7 +4,6 @@ import VueAxios from 'vue-axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import env from './env'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -12,7 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // styles
 import '@/assets/scss/style.scss'
 
-axios.defaults.baseURL = env.baseURL + env.customURL
 // 超時檢查
 axios.defaults.timeout = 5000
 // API 錯誤攔截

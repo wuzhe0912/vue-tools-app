@@ -17,7 +17,7 @@ export default {
         { name: '待辦', icon: 'list-alt', route: 'todo' },
         { name: '分類', icon: 'bars', route: 'category' },
         { name: '新聞', icon: 'newspaper', route: 'news' },
-        { name: '商城', icon: 'store-alt', route: 'mall' },
+        { name: '服務', icon: 'shopping-bag', route: 'mall' },
         { name: '個人', icon: 'user', route: 'personal' }
       ]
     }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .category__wrap
+  .category__wrap.hall__wrap
     .container(v-for="node in list")
       .title
         font-awesome-icon.title__icon(:icon="node.icon")
@@ -8,7 +8,7 @@
         .content__wrap(v-for="subNode in node.subList" :class="{isDisabled: subNode.disabled}")
           .list__icon
             font-awesome-icon(:icon="subNode.icon")
-          .list__txt
+          .list__text
             span {{ subNode.name }}
             span(v-if="subNode.disabled") (尚未實裝)
 </template>
