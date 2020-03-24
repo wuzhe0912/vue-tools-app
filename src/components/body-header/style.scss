@@ -15,6 +15,12 @@
   box-shadow: 0px to-rem(3px) to-rem(6px) $primary-weight;
 }
 
+.back__icon {
+  @include position(absolute, n, n, n, to-rem(16px));
+  cursor: pointer;
+}
+
+.back__icon,
 .header__title {
   font-size: $font-big;
   color: $light;

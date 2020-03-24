@@ -1,6 +1,7 @@
 <template lang="pug">
   .header__wrap
-    //- .back__icon
+    .back__icon(v-if="$route.meta.hasBackArrow" @click="routerAction()")
+      font-awesome-icon(icon="chevron-left")
     header.header__title {{ pageName }}
 </template>
 
@@ -19,6 +20,12 @@ export default {
       let target = TITLE_LIST.find(node => node.route === this.$route.name)
       if (target) return target.name
       else return this.$route.name
+    }
+  },
+
+  methods: {
+    routerAction () {
+      this.$router.go(-1)
     }
   }
 }

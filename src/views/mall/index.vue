@@ -1,5 +1,5 @@
 <template lang="pug">
-  .mall__wrap.hall__wrap
+  .hall__wrap
     .container(v-for="node in list")
       .title
         font-awesome-icon.title__icon(:icon="node.icon")
