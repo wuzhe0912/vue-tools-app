@@ -1,0 +1,50 @@
+@import '@/assets/scss/share.scss';
+
+.tic__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: to-rem(32px);
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $light;
+  border: 1px solid $border-line;
+  width: calc(100% / 3);
+  height: to-rem(100px);
+  font-size: $font-huge;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: to-rem(24px);
+  font-size: $font-big;
+  color: $primary-light;
+}
+
+.winner-txt {
+  margin-top: to-rem(16px);
+}
+
+.btn {
+  margin-top: to-rem(16px);
+  width: to-rem(150px);
+  height: to-rem(40px);
+  background: $primary-light;
+  border-radius: to-rem(28px);
+  color: $light;
+  font-size: $font-big;
+}

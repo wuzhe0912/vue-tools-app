@@ -2,6 +2,8 @@ import loadingPage from '@/views/loading-page'
 import todo from '@/views/todo'
 import category from '@/views/category'
 import timer from '@/views/category/timer'
+import calculator from '@/views/category/calculator'
+import ticTacToe from '@/views/category/ticTacToe'
 import news from '@/views/news'
 import mall from '@/views/mall'
 import personal from '@/views/personal'
@@ -29,6 +31,18 @@ export const routes = [
     path: '/category/timer',
     name: 'timer',
     component: timer,
+    meta: { hasHeader: true, hasNav: true, hasBackArrow: true }
+  },
+  {
+    path: '/category/calculator',
+    name: 'calculator',
+    component: calculator,
+    meta: { hasHeader: true, hasNav: true, hasBackArrow: true }
+  },
+  {
+    path: '/category/ticTacToe',
+    name: 'ticTacToe',
+    component: ticTacToe,
     meta: { hasHeader: true, hasNav: true, hasBackArrow: true }
   },
   {

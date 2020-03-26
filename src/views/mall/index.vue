@@ -26,9 +26,9 @@ export default {
           icon: 'fire-alt',
           subList: [
             { name: '樹懶公寓', icon: 'building' },
-            { name: '六角商城', icon: 'store' },
-            { name: '測試', icon: 'power-off', disabled: true },
-            { name: '測試', icon: 'power-off', disabled: true }
+            { name: '六角商城', icon: 'store' }
+            // { name: '測試', icon: 'power-off', disabled: true },
+            // { name: '測試', icon: 'power-off', disabled: true }
           ]
         }
       ]

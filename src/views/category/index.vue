@@ -30,23 +30,23 @@ export default {
           name: '應用工具',
           icon: 'tools',
           subList: [
-            { name: '蕃茄鐘', icon: 'clock', disabled: false, code: 'timer' },
             { name: '匿名聊天', icon: 'comment', disabled: false, url: 'https://vue-chat-6a66d.firebaseapp.com/' },
-            { name: '測試app', icon: 'power-off', disabled: true },
-            { name: '測試app', icon: 'power-off', disabled: true },
-            { name: '測試app', icon: 'power-off', disabled: true },
-            { name: '測試app', icon: 'power-off', disabled: true },
-            { name: '測試app', icon: 'power-off', disabled: true }
+            { name: '蕃茄鐘', icon: 'clock', disabled: false, code: 'timer' },
+            { name: '計算機', icon: 'calculator', disabled: true, code: '' }
+            // { name: '測試app', icon: 'power-off', disabled: true },
+            // { name: '測試app', icon: 'power-off', disabled: true },
+            // { name: '測試app', icon: 'power-off', disabled: true },
+            // { name: '測試app', icon: 'power-off', disabled: true }
           ]
         },
         {
           name: '遊戲',
           icon: 'gamepad',
           subList: [
-            { name: '測試遊戲', icon: 'power-off', disabled: true },
-            { name: '測試遊戲', icon: 'power-off', disabled: true },
-            { name: '測試遊戲', icon: 'power-off', disabled: true },
-            { name: '測試遊戲', icon: 'power-off', disabled: true }
+            { name: '井字遊戲', icon: 'dice-d6', disabled: false, code: 'ticTacToe' }
+            // { name: '測試遊戲', icon: 'power-off', disabled: true },
+            // { name: '測試遊戲', icon: 'power-off', disabled: true },
+            // { name: '測試遊戲', icon: 'power-off', disabled: true }
           ]
         }
       ]

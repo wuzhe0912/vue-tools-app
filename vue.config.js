@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     // proxy: {
     //   '/api': {
-    //     target: 'https://vue-course-api.hexschool.io',
+    //     target: '',
     //     changeOrigin: true,
     //     pathRewrite: {
     //       '^/api': ''

@@ -73,7 +73,6 @@ export default {
     },
 
     tick () {
-      console.log(this.timePause)
       if (this.timePause === false) {
         if (this.timeRunning && this.timeRemaining > 0) {
           this.timeRemaining--
