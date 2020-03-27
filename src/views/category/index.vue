@@ -6,7 +6,12 @@
         span.title__txt {{ node.name }}
       .content
         template(v-for="subNode in node.subList")
-          a.content__wrap(v-if="subNode.icon === 'comment'" :href="subNode.url" target="_blank")
+          .content__wrap(v-if="subNode.icon === 'language'")
+            .list__icon
+              font-awesome-icon(:icon="subNode.icon")
+            .list__text
+              span {{ subNode.name }}
+          a.content__wrap(v-else-if="subNode.icon === 'comment'" :href="subNode.url" target="_blank")
             .list__icon
               font-awesome-icon(:icon="subNode.icon")
             .list__text
@@ -30,10 +35,10 @@ export default {
           name: '應用工具',
           icon: 'tools',
           subList: [
+            { name: '語系切換', icon: 'language', disabled: false, code: 'language' },
             { name: '匿名聊天', icon: 'comment', disabled: false, url: 'https://vue-chat-6a66d.firebaseapp.com/' },
             { name: '蕃茄鐘', icon: 'clock', disabled: false, code: 'timer' },
             { name: '計算機', icon: 'calculator', disabled: true, code: '' }
-            // { name: '測試app', icon: 'power-off', disabled: true },
             // { name: '測試app', icon: 'power-off', disabled: true },
             // { name: '測試app', icon: 'power-off', disabled: true },
             // { name: '測試app', icon: 'power-off', disabled: true }
