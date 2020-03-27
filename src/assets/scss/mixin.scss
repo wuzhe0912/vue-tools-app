@@ -44,3 +44,13 @@
     }
   }
 }
+
+$countryList: tw en jp cn;
+
+@mixin country-flag {
+  @each $icon in $countryList {
+    .icon-#{$icon} {
+      background-image: url("./images/#{$icon}.svg");
+    }
+  }
+}

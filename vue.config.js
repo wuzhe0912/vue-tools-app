@@ -23,5 +23,14 @@ module.exports = {
         args[0].title = 'DoDo Bird Tools App'
         return args
       })
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: 'en',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: false
+    }
   }
 }

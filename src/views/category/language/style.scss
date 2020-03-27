@@ -1,0 +1,47 @@
+@import '@/assets/scss/share.scss';
+
+.lang__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: to-rem(32px);
+}
+
+.lang__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: to-rem(48px);
+  margin-bottom: to-rem(24px);
+  border-radius: to-rem(24px);
+  border: 2px solid $primary-light;
+  background: $primary-mini;
+}
+
+.lang__title {
+  @include country-flag;
+
+  display: flex;
+  align-items: center;
+  margin-left: to-rem(8px);
+}
+
+.icon__flag {
+  display: flex;
+  width: to-rem(32px);
+  height: to-rem(32px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.active {
+  margin-right: to-rem(16px);
+  background: url("./images/icon-select.svg");
+  width: to-rem(24px);
+  height: to-rem(24px);
+  background-position: center center;
+  background-repeat: no-repeat;
+}

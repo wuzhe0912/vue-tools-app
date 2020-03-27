@@ -3,25 +3,19 @@
     .container(v-for="node in list")
       .title
         font-awesome-icon.title__icon(:icon="node.icon")
-        span.title__txt {{ node.name }}
+        span.title__txt {{ $t(node.name) }}
       .content
         template(v-for="subNode in node.subList")
-          .content__wrap(v-if="subNode.icon === 'language'")
+          a.content__wrap(v-if="subNode.icon === 'comment'" :href="subNode.url" target="_blank")
             .list__icon
               font-awesome-icon(:icon="subNode.icon")
             .list__text
-              span {{ subNode.name }}
-          a.content__wrap(v-else-if="subNode.icon === 'comment'" :href="subNode.url" target="_blank")
-            .list__icon
-              font-awesome-icon(:icon="subNode.icon")
-            .list__text
-              span {{ subNode.name }}
+              span {{ $t(subNode.name) }}
           router-link.content__wrap(v-else :class="{isDisabled: subNode.disabled}" :to="{ name: subNode.code }")
             .list__icon
               font-awesome-icon(:icon="subNode.icon")
             .list__text
-              span {{ subNode.name }}
-              span(v-if="subNode.disabled") (尚未實裝)
+              span {{ $t(subNode.name) }}
 </template>
 
 <script>

@@ -5,7 +5,7 @@
         .tag__wrap(:class="{ isActive: isSelected === node.category }" @click="fetchTopNews(node.category)")
           .tag__icon
             font-awesome-icon(icon="tags")
-          span {{ node.name }}
+          span {{ $t(node.name) }}
     .slide__list
       swiper(:options="swiperOption")
         swiper-slide(v-for="(node, index) in slideList" :key="index")

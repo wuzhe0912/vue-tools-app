@@ -6,9 +6,9 @@
         @click="setGrid(index)"
       ) {{ symbolFormatter(node) }}
     footer.player
-      .player-txt 目前下棋者：<span>{{ playerFormatter(player) }}</span>
-      .winner-txt(v-if="winner !== 0") 贏者：{{ playerFormatter(winner) }}
-      button.btn(v-if="winner !== 0" @click="reset()") 再來一局
+      .player-txt {{ $t('目前下棋者') }}：<span>{{ playerFormatter(player) }}</span>
+      .winner-txt(v-if="winner !== 0") {{ $t('贏者') }}：{{ playerFormatter(winner) }}
+      button.btn(v-if="winner !== 0" @click="reset()") {{ $t('再來一局') }}
 </template>
 
 <script>
@@ -58,7 +58,7 @@ export default {
       return val === 0 ? '' : val === 1 ? 'O' : 'X'
     },
     playerFormatter (val) {
-      return val === 1 ? '玩家 A' : val === -1 ? '玩家 B' : ''
+      return val === 1 ? 'Player A' : val === -1 ? 'Player B' : ''
     },
     checkWinner () {
       for (let i = 0; i < 8; i++) {

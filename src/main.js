@@ -13,6 +13,7 @@ import '@/assets/scss/style.scss'
 import 'element-theme-chalk/lib/loading.css'
 
 import ElLoading from 'element-loading'
+import i18n from './i18n'
 
 // 超時檢查
 axios.defaults.timeout = 5000
@@ -35,5 +36,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

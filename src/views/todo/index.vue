@@ -1,11 +1,11 @@
 <template lang="pug">
   .wrap
     .todo__wrap
-      span.time__title 當前時間：{{ todayTime }}
+      span.time__title {{ $t('當前時間') }}：{{ todayTime }}
       .table__card
-        span.card__txt(@click="selected = 'all'" :class="{isActive: selected === 'all'}") 全部
-        span.card__txt(@click="selected = 'doing'" :class="{isActive: selected === 'doing'}") 進行中
-        span.card__txt(@click="selected = 'done'" :class="{isActive: selected === 'done'}") 已完成
+        span.card__txt(@click="selected = 'all'" :class="{isActive: selected === 'all'}") {{ $t('全部') }}
+        span.card__txt(@click="selected = 'doing'" :class="{isActive: selected === 'doing'}") {{ $t('進行中') }}
+        span.card__txt(@click="selected = 'done'" :class="{isActive: selected === 'done'}") {{ $t('已完成') }}
       ul.todo__list(v-if="todoList.length > 0")
         li.list__content(v-for="(node, key) in filterTodoList")
             .form__checkbox
@@ -27,25 +27,25 @@
               .delete__icon(@click="removeTodo(node)")
                 font-awesome-icon(icon="times-circle")
         .list__footer
-          .list__footer__txt 還有<span class="list__number">{{ checkNoCompleted }}</span>筆任務未完成
-          .list__footer__clear(@click="removeTodo('clearAll')") 清除所有任務
-      span.todo__title(v-else) 尚未有待辦事項～
+          .list__footer__txt {{ $t('還有') }}<span class="list__number">{{ checkNoCompleted }}</span> {{ $t('筆任務未完成') }}
+          .list__footer__clear(@click="removeTodo('clearAll')") {{ $t('清除所有任務') }}
+      span.todo__title(v-else) {{ $t('尚未有待辦事項') }}
     .btn__wrap
       .input__wrap(v-if="changeInput")
         input.form__input(
           v-model="newToDo"
           type="text"
-          placeholder="請輸入文字"
+          :placeholder="$t('請輸入文字')"
           onfocus="this.placeholder = ''"
-          onblur="this.placeholder = '請輸入文字'"
+          :onblur="this.placeholder = $t('請輸入文字')"
           @keyup.enter="addTodoList()"
         )
         button.btn__add(@click="addTodoList()")
           font-awesome-icon.btn__add__icon(icon="hand-point-up")
-          span.btn__add__txt 推送
+          span.btn__add__txt {{ $t('推送') }}
       button.btn__primary.add__container(@click="change()")
         font-awesome-icon.add__icon(icon="plus")
-        span.add__txt 新增待辦事項
+        span.add__txt {{ $t('新增待辦事項') }}
 </template>
 
 <script>

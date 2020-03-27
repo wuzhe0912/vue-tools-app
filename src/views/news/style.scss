@@ -52,6 +52,7 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
   width: calc(100% / 3);
 }
 
@@ -59,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: to-rem(80px);
+  width: to-rem(90px);
   font-size: $font-mini;
   background: $primary-light;
   color: $light;

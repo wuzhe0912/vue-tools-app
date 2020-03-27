@@ -4,8 +4,9 @@ import category from '@/views/category'
 import timer from '@/views/category/timer'
 import calculator from '@/views/category/calculator'
 import ticTacToe from '@/views/category/ticTacToe'
+import language from '@/views/category/language'
 import news from '@/views/news'
-import mall from '@/views/mall'
+import services from '@/views/services'
 import personal from '@/views/personal'
 
 export const routes = [
@@ -46,15 +47,21 @@ export const routes = [
     meta: { hasHeader: true, hasNav: true, hasBackArrow: true }
   },
   {
+    path: '/category/language',
+    name: 'language',
+    component: language,
+    meta: { hasHeader: true, hasNav: true, hasBackArrow: true }
+  },
+  {
     path: '/news',
     name: 'news',
     component: news,
     meta: { hasHeader: true, hasNav: true, hasBackArrow: false }
   },
   {
-    path: '/mall',
-    name: 'mall',
-    component: mall,
+    path: '/services',
+    name: 'services',
+    component: services,
     meta: { hasHeader: true, hasNav: true, hasBackArrow: false }
   },
   {

@@ -2,7 +2,7 @@
   .header__wrap
     .back__icon(v-if="$route.meta.hasBackArrow" @click="routerAction()")
       font-awesome-icon(icon="chevron-left")
-    header.header__title {{ pageName }}
+    header.header__title {{ $t(pageName) }}
 </template>
 
 <script>
