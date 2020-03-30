@@ -1,0 +1,117 @@
+@import '@/assets/scss/share.scss';
+
+.slide__room {
+  @include breakpoint($mobile, true) {
+    height: to-rem(240px);
+  }
+
+  display: flex;
+  width: 100%;
+  height: to-rem(180px);
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.room__list {
+  margin-top: to-rem(16px);
+}
+
+.title__txt {
+  font-size: $font-big;
+}
+
+.room__limit {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.limit__list {
+  @include breakpoint($mobile, true) {
+    width: calc(100% / 3);
+  }
+
+  display: flex;
+  align-items: center;
+  min-width: 50%;
+  line-height: to-rem(24px);
+}
+
+.small__txt {
+  font-size: $font-mini;
+  color: $txt-light;
+}
+
+.small__icon {
+  font-size: $font-big;
+  color: $primary-light;
+}
+
+.limit__list__txt {
+  margin-left: to-rem(8px);
+}
+
+.bed__type {
+  display: flex;
+  margin-right: to-rem(8px);
+}
+
+.limit__txt {
+  margin-left: to-rem(2px);
+}
+
+.price__detail {
+  margin-top: to-rem(8px);
+}
+
+.price__txt {
+  margin-left: to-rem(16px);
+}
+
+.room__tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag__content {
+  display: flex;
+  align-items: center;
+  background-color: $tag-bg;
+  border: 1px solid $tag-bg;
+  margin-right: to-rem(8px);
+  margin-bottom: to-rem(4px);
+  padding: to-rem(4px);
+}
+
+.tag__txt {
+  margin-left: to-rem(4px);
+}
+
+.room__check {
+  line-height: to-rem(28px);
+
+  span {
+    font-size: $font-small;
+    color: $txt-light;
+  }
+}
+
+.later__txt {
+  margin-left: to-rem(8px);
+}
+
+.description__txt {
+  margin-top: to-rem(8px);
+  line-height: to-rem(16px);
+}
+
+.btn__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

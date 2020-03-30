@@ -1,0 +1,37 @@
+@import '@/assets/scss/share.scss';
+
+.record__warp {
+  width: 100%;
+  padding: to-rem(32px);
+}
+
+.record__completed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: to-rem(200px);
+  background-color: $primary-light;
+  border: 1px solid $border-line;
+  border-radius: to-rem(10px);
+  color: $light;
+
+  span {
+    font-size: $font-big;
+  }
+}
+
+.icon {
+  width: to-rem(120px);
+  height: to-rem(100px);
+  background: url("./images/book_ok.svg") no-repeat;
+  background-size: contain;
+}
+
+.btn__wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: to-rem(16px);
+  cursor: pointer;
+}

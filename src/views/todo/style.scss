@@ -123,19 +123,6 @@
   margin-top: to-rem(16px);
 }
 
-.btn__add {
-  width: 20%;
-  background: $primary-light;
-  border-radius: to-rem(20px);
-  cursor: pointer;
-}
-
-.btn__add__icon,
-.btn__add__txt {
-  color: $light;
-  font-size: $font-mini;
-}
-
 .btn__add__txt {
   margin-left: to-rem(4px);
 }

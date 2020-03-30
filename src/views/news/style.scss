@@ -13,31 +13,6 @@
   height: to-rem(240px);
 }
 
-.swiper-container {
-  width: 100%;
-  height: auto;
-}
-
-.swiper-slide {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-
-  img {
-    display: block;
-  }
-
-  .slide__txt {
-    @include position(absolute, n, n, to-rem(32px), to-rem(32px));
-    color: $light;
-    font-size: $font-big;
-  }
-}
-
 // tag list
 .category__list {
   display: flex;

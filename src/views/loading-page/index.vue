@@ -12,7 +12,7 @@ export default {
   created () {
     setTimeout(() => {
       this.$router.push({ name: 'todo' })
-    }, 3000)
+    }, 2000)
   }
 }
 </script>

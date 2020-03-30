@@ -1,4 +1,6 @@
 @import "./share";
+@import "./time";
+@import "./form.scss";
 
 html {
   font-size: 100%;
@@ -87,21 +89,17 @@ input {
 }
 
 .btn__primary {
-  width: 90%;
-  background: $primary;
-  border-radius: to-rem(4px);
-  height: to-rem(44px);
+  width: 65%;
+  height: to-rem(52px);
+  border-radius: to-rem(10px);
+  background: $header-bg;
+  box-shadow: 0px to-rem(3px) to-rem(6px) $primary-weight;
+  cursor: pointer;
 }
 
-.form__input {
-  width: 80%;
-  border-bottom: 1px solid $border-line;
-  background: $main-bg;
-  height: to-rem(24px);
-
-  &:focus {
-    border-bottom-color: $primary;
-  }
+.btn {
+  color: $light;
+  font-size: $font-big;
 }
 
 // hall styles
@@ -176,5 +174,31 @@ input {
 
   .list__icon {
     background: $disabled-icon;
+  }
+}
+
+// slide
+.swiper-container {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  img {
+    display: block;
+  }
+
+  .slide__txt {
+    @include position(absolute, n, n, to-rem(32px), to-rem(32px));
+    color: $light;
+    font-size: $font-big;
   }
 }

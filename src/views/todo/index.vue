@@ -31,21 +31,21 @@
           .list__footer__clear(@click="removeTodo('clearAll')") {{ $t('清除所有任務') }}
       span.todo__title(v-else) {{ $t('尚未有待辦事項') }}
     .btn__wrap
-      .input__wrap(v-if="changeInput")
-        input.form__input(
-          v-model="newToDo"
-          type="text"
-          :placeholder="$t('請輸入文字')"
-          onfocus="this.placeholder = ''"
-          :onblur="this.placeholder = $t('請輸入文字')"
-          @keyup.enter="addTodoList()"
-        )
-        button.btn__add(@click="addTodoList()")
-          font-awesome-icon.btn__add__icon(icon="hand-point-up")
-          span.btn__add__txt {{ $t('推送') }}
-      button.btn__primary.add__container(@click="change()")
-        font-awesome-icon.add__icon(icon="plus")
-        span.add__txt {{ $t('新增待辦事項') }}
+      template(v-if="changeInput")
+        .input__wrap
+          input.form__input(
+            v-model="newToDo"
+            type="text"
+            :placeholder="$t('請輸入文字')"
+            @keyup.enter="addTodoList()"
+          )
+        button.btn__primary.add__container(@click="addTodoList()")
+          font-awesome-icon.add__icon(icon="hand-point-up")
+          span.add__txt {{ $t('推送') }}
+      template(v-else)
+        button.btn__primary.add__container(@click="change()")
+          font-awesome-icon.add__icon(icon="plus")
+          span.add__txt {{ $t('新增待辦事項') }}
 </template>
 
 <script>

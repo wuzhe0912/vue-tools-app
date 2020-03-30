@@ -1,0 +1,58 @@
+@import '@/assets/scss/share.scss';
+
+.list__container {
+  @include breakpoint($mobile, true) {
+    justify-content: space-around;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.room__list {
+  @include breakpoint($mobile, true) {
+    width: calc(90% / 2);
+    height: to-rem(120px);
+    font-size: $font-normal;
+  }
+
+  display: flex;
+  margin-top: to-rem(20px);
+  width: 100%;
+  height: to-rem(100px);
+  font-size: $font-mini;
+  border: 1px solid $border-line;
+  border-radius: to-rem(10px);
+  box-shadow: 0 to-rem(3px) to-rem(6px) $box-shadow;
+  cursor: pointer;
+}
+
+.list__img {
+  display: flex;
+  overflow: hidden;
+  max-width: 35%;
+  border-top-left-radius: to-rem(10px);
+  border-bottom-left-radius: to-rem(10px);
+}
+
+.list__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: to-rem(8px);
+  width: 60%;
+}
+
+.room__price {
+  margin-top: to-rem(16px);
+}
+
+.list__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary;
+  margin-left: to-rem(8px);
+  width: 10%;
+}

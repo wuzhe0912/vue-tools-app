@@ -11,6 +11,7 @@
   max-width: $padPro;
   height: $header;
   margin: auto;
+  z-index: index($z-index, base);
   background: $header-bg;
   box-shadow: 0px to-rem(3px) to-rem(6px) $primary-weight;
 }

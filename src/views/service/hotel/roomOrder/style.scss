@@ -1,0 +1,32 @@
+@import '@/assets/scss/share.scss';
+
+.order__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__wrap {
+  width: 100%;
+  border: 1px solid $border-line;
+  background: $form-input-bg;
+  border-radius: to-rem(4px);
+  font-size: $font-mini;
+  padding: to-rem(8px);
+  color: $txt-light;
+  margin-bottom: to-rem(16px);
+}
+
+.card__list {
+  margin-bottom: to-rem(16px);
+}
+
+.card__txt {
+  display: flex;
+  flex-direction: column;
+  line-height: to-rem(24px);
+}
+
+.btn__wrap {
+  display: flex;
+  justify-content: center;
+}
