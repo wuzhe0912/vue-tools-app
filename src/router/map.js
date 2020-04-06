@@ -101,5 +101,6 @@ export const routes = [
     name: 'personal',
     component: personal,
     meta: { hasHeader: true, hasNav: true, hasBackArrow: false }
-  }
+  },
+  { path: '*', redirect: { name: 'loadingPage' } }
 ]
