@@ -6,22 +6,26 @@
           .tag__icon
             font-awesome-icon(icon="tags")
           span {{ $t(node.name) }}
-    .slide__list
-      swiper(:options="swiperOption")
-        swiper-slide(v-for="(node, index) in slideList" :key="index")
-          img(:src="node.urlToImage")
-          span.slide__txt {{ stringFormatter(node.title) }}
-        .swiper-pagination.swiper-pagination-white(slot="pagination")
-    .news__list(v-loading="loading")
-      .news__list__wrap
-        article.news__card(v-for="node in formData")
-          .card__img
-            img(v-if="node.urlToImage" :src="node.urlToImage")
-            font-awesome-icon.img__icon(v-else icon="image")
-          section.card__txt
-            .txt__title {{ node.title }}
-          a.card__arrow(:href="node.url" target="_blank")
-            font-awesome-icon(icon="angle-double-right")
+    template(v-if="checkNewsAPI")
+      .no__news__api 因為 News API 更改使用規則，不再允許免費帳號發出跨域請求，暫時無法查詢，等待更換新的替代 API<br/>
+        span 2020.10.20
+    template(v-else)
+      .slide__list
+        swiper(:options="swiperOption")
+          swiper-slide(v-for="(node, index) in slideList" :key="index")
+            img(:src="node.urlToImage")
+            span.slide__txt {{ stringFormatter(node.title) }}
+          .swiper-pagination.swiper-pagination-white(slot="pagination")
+      .news__list(v-loading="loading")
+        .news__list__wrap
+          article.news__card(v-for="node in formData")
+            .card__img
+              img(v-if="node.urlToImage" :src="node.urlToImage")
+              font-awesome-icon.img__icon(v-else icon="image")
+            section.card__txt
+              .txt__title {{ node.title }}
+            a.card__arrow(:href="node.url" target="_blank")
+              font-awesome-icon(icon="angle-double-right")
 </template>
 
 <script>
@@ -64,7 +68,8 @@ export default {
         }
       },
       slideList: [],
-      loading: false
+      loading: false,
+      checkNewsAPI: false
     }
   },
 
@@ -90,6 +95,7 @@ export default {
         this.loading = false
       }).catch((err) => {
         this.loading = false
+        this.checkNewsAPI = true
         console.log(err)
       })
     },
@@ -103,4 +109,9 @@ export default {
 
 <style lang="scss" scoped>
   @import './style';
+
+  .no__news__api {
+    margin-top: 16px;
+    line-height: 24px;
+  }
 </style>

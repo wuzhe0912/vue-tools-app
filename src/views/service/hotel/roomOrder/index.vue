@@ -48,6 +48,7 @@
         span {{ holidayPrice }} / {{ $t('假日每晚(週五～週日)') }}
         span(v-if="formData.startTime") {{ $t('入住日') }}：{{ timeFormatter(formData.startTime) }}
         span(v-if="formData.endTime") {{ $t('退房日') }}：{{ timeFormatter(formData.endTime) }}
+    .error__text(v-if="errorTime") {{ $t('入住日不可選擇今天') }}
     .btn__wrap
       button.btn__primary.btn(type="submit" v-loading="loading" value="確認付款") {{ $t('確認付款') }}
 </template>
@@ -109,6 +110,12 @@ export default {
       this.$v.formData.$touch()
       if (this.$v.formData.$error) return
 
+      let today = moment().endOf('day').format('YYYY-MM-DD')
+      if (today === currentTime) {
+        this.errorTime = true
+        return
+      } else this.errorTime = false
+
       let dateArray = []
       dateArray.push(currentTime, stopTime)
       let obj = {
@@ -138,4 +145,11 @@ export default {
 
 <style lang="scss" scoped>
   @import './style';
+
+  .error__text {
+    display: flex;
+    justify-content: center;
+    margin: 4px 0;
+    color: red;
+  }
 </style>

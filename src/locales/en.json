@@ -68,6 +68,7 @@
   "電話": "phone",
   "電話為必填，且為數字": "Phone is required and is a number",
   "預約起迄時間(入住日不可選擇今天)": "Time Range(you cannot choose today)",
+  "入住日不可選擇今天": "You cannot choose today",
   "請確認時間選擇範圍是否正確": "Please confirm time range is correct",
   "請選擇起始日期": "start date",
   "請選擇結束日期": "end date",
