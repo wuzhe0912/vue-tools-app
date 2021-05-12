@@ -18,7 +18,7 @@
     "element-theme-chalk": "^2.13.0",
     "luxon": "^1.22.2",
     "moment": "^2.24.0",
-    "swiper": "^5.3.6",
+    "swiper": "^6.5.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.0.4",
     "vue-axios": "^2.1.5",
