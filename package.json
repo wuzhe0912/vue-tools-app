@@ -16,7 +16,7 @@
     "core-js": "^3.6.4",
     "element-loading": "^2.0.0",
     "element-theme-chalk": "^2.13.0",
-    "luxon": "^1.22.2",
+    "luxon": "^1.28.1",
     "moment": "^2.24.0",
     "swiper": "^5.3.6",
     "vue": "^2.6.11",
